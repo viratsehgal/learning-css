@@ -1,3 +1,53 @@
-p {
-  color: red;
+@import url("https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family:
+    "Space Mono", apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  padding: 15px;
+  background-color: black;
+  color: white;
+  text-align: center;
+  border-radius: 10px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+nav {
+  background-color: rgb(40, 40, 40);
+  padding: 20px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 650px;
+}
+h2 {
+  margin-bottom: 20px;
+  background-color: rgba(153, 217, 234, 0.158);
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+li {
+  background-color: rgba(153, 217, 234, 0.158);
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+li:hover {
+  background-color: rgba(153, 217, 234, 0.308);
+}
+li:active{
+  background-color: rgba(153, 217, 234, 0.508);
 }
