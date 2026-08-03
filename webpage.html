@@ -1,0 +1,63 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Virat Sehgal</title>
+    <link rel="icon" type="image/x-icon" href="images/virat.img.jpeg" />
+  </head>
+  <body>
+    <nav>
+      <ul class="navbar">
+        <li><a href="webpage.html"> Home </a></li>
+      </ul>
+      <div class="contact-links">
+        <button onclick="copytext()" id="email" class="contact-content-button">
+          E-mail
+        </button>
+        <a href="https://x.com/ViratSehgal__" target="_blank" id="twitter"
+          >X(Twitter)↗</a
+        >
+        <a
+          href="https://www.instagram.com/viratsehgall/"
+          target="_blank"
+          id="instagram"
+          >Instagram↗</a
+        >
+        <a href="https://github.com/viratsehgal" target="_blank" id="github"
+          >GitHub↗</a
+        >
+      </div>
+    </nav>
+
+    <h1 class="about-title">About Me</h1>
+    <img
+      src="images/Virat.img.jpeg"
+      width="100"
+      height="100"
+      alt="Virat Sehgal"
+      class="about-image"
+    />
+    <p class="about-content">My name is Virat Sehgal</p>
+    <p class="about-content">
+      I am currently studying Computer Science and Engineering
+    </p>
+    <p class="about-content">
+      Learning new programming languages and frameworks
+    </p>
+    <br>
+
+    <script>
+      function copytext() {
+        const text = "viratsehgal.work@gmail.com";
+        navigator.clipboard.writeText(text).then(() => {
+          const button = document.getElementById("email");
+          button.innerText = "Copied!";
+          setTimeout(() => {
+            button.innerText = " E-mail";
+          }, 2000);
+        });
+      }
+    </script> 
+  </body>
+</html>

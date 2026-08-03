@@ -11,32 +11,28 @@ body {
     "Space Mono", apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   padding: 15px;
-  background-color: black;
+  background-color: rgb(29, 29, 29);
   color: white;
 }
 
 nav {
-  background-color: rgb(40, 40, 40);
+  background-color:transparent;
   padding: 10px;
   border-radius: 10px;
-  width: 150px;
+  width: 100%;
   text-align: center;
-  display: flex;
   align-items: center;
-  justify-content: center;
+  display: flex;
+  justify-content: space-between;
   margin-left: 8px;
 }
 
 .navbar {
   list-style: none;
-  display: flex;
+  display: inline-block;
   gap: 8px;
   justify-content: center;
   flex-wrap: wrap;
-}
-
-.navbar > li {
-  position: relative;
 }
 
 .navbar > li > a {
@@ -50,6 +46,10 @@ nav {
 
 .navbar > li > a:hover {
   background-color: rgba(153, 217, 234, 0.308);
+}
+
+section {
+  margin-bottom: 40px;
 }
 
 .home-title {
@@ -77,53 +77,23 @@ nav {
   margin-top: 15px;
 }
 
-.contact-content {
+.contact-links {
   font-size: 16px;
   line-height: 1.5;
-  text-align: left;
-  margin-left: 25px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-left: auto;
+  margin-right: 10px;
+}
+
+.contact-links a {
+  color: white;
+  text-decoration: none;
 }
 
 .navbar > li > a:active {
   background-color: rgba(153, 217, 234, 0.508);
-}
-
-.dropdown-menu {
-  list-style: none;
-  position: absolute;
-  top: calc(100%);
-  left: 0;
-  min-width: 180px;
-  background: rgb(40, 40, 40);
-  border-radius: 10px;
-  padding: 8px;
-  text-align: left;
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(10px);
-  transition:
-    opacity 0.3s ease,
-    transform 0.3s ease,
-    visibility 0.3s ease;
-  z-index: 10;
-}
-
-.dropdown-menu li a {
-  display: block;
-  color: white;
-  text-decoration: none;
-  padding: 10px 12px;
-  border-radius: 8px;
-}
-
-.dropdown-menu li a:hover {
-  background-color: rgba(153, 217, 234, 0.308);
-}
-
-.dropdown:hover .dropdown-menu {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
 }
 
 .about-title {
@@ -142,10 +112,6 @@ nav {
   margin-left: 25px;
 }
 
-.contact-content a {
-  color: white;
-  text-decoration: none;
-}
 
 #email:hover {
   text-decoration: underline;
@@ -179,15 +145,27 @@ nav {
   color: transparent;
 }
 .about-image {
-  border-radius: 50%;
+  border-radius: 5px;
   margin-left: 25px;
   margin-top: 15px;
   margin-bottom: 15px;
   margin-right: 25px;
-  box-shadow: 0 0 10px rgb(255, 255, 255);
 }
 .about-image:hover {
   transform: scale(1.1);
-  box-shadow: 0 0 15px rgb(255, 255, 255);
-  transition: all 0.3s ease;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.215);
+  transition: all 0.13s ease;
+}
+
+.contact-content-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: left;
+  color: white;
+  text-decoration: none;
+  font-family: inherit;
+  transition: all 0.13s ease;
 }
