@@ -4,30 +4,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <title>Virat Sehgal</title>
-    <link rel="icon" type="image/x-icon" href="images/virat.img.jpeg" />
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
   </head>
   <body>
     <nav>
       <ul class="navbar">
         <li><a href="webpage.html"> Home </a></li>
       </ul>
-      <div class="contact-links">
-        <button onclick="copytext()" id="email" class="contact-content-button">
-          E-mail
-        </button>
-        <a href="https://x.com/ViratSehgal__" target="_blank" id="twitter"
-          >X(Twitter)↗</a
-        >
-        <a
-          href="https://www.instagram.com/viratsehgall/"
-          target="_blank"
-          id="instagram"
-          >Instagram↗</a
-        >
-        <a href="https://github.com/viratsehgal" target="_blank" id="github"
-          >GitHub↗</a
-        >
-      </div>
+      <ul>
+        <div class="contact-links">
+          <button
+            onclick="copytext()"
+            id="email"
+            class="contact-content-button"
+          >
+            E-mail
+          </button>
+          <a href="https://x.com/ViratSehgal__" target="_blank" id="twitter"
+            >X(Twitter)↗</a
+          >
+          <a
+            href="https://www.instagram.com/viratsehgall/"
+            target="_blank"
+            id="instagram"
+            >Instagram↗</a
+          >
+
+          <a href="https://github.com/viratsehgal" target="_blank" id="github"
+            >GitHub↗</a
+          >
+        </div>
+      </ul>
     </nav>
 
     <h1 class="about-title">About Me</h1>
@@ -45,7 +52,9 @@
     <p class="about-content">
       Learning new programming languages and frameworks
     </p>
-    <br>
+    <h1 class="about-title"><center>My Projects</center></h1>
+    <a href="https://x.com/ViratSehgal__/status/2080133019051114671" target="_blank" class="project-link">Basic Youtube Clone</a>
+    <a href="https://x.com/ViratSehgal__/status/2075296182763749781" target="_blank" class="project-link">Python student management system</a>
 
     <script>
       function copytext() {
@@ -58,6 +67,7 @@
           }, 2000);
         });
       }
-    </script> 
+    </script>
+    <hr class="about-content-divider" />
   </body>
 </html>
