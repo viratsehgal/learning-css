@@ -25,6 +25,7 @@ nav {
   display: flex;
   justify-content: space-between;
   margin-left: 8px;
+
 }
 
 .navbar {
@@ -57,8 +58,9 @@ section {
   font-weight: bold;
   text-align: left;
   margin-bottom: 20px;
-  margin-left: 20px;
-  margin-top: 15px;
+  margin-left: 10px;
+  margin-top: 15px; 
+  margin-right: 10px;
 }
 
 .home-content {
@@ -199,8 +201,8 @@ section {
 
 .about-content-divider {
   color: rgba(153, 217, 234, 0.308);
-  margin-left: 20px;
-  margin-right: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
   margin-bottom: 20px;
   margin-top: 20px;
   background: rgba(153, 217, 234, 0.308);
@@ -218,6 +220,7 @@ section {
   margin-right: 25px;
   margin-top: 10px;
   margin-bottom: 10px;
+  background-color: rgba(254, 254, 254, 0.027);
 }
 
 .project-link:hover {
@@ -226,4 +229,27 @@ section {
   transform: scale(1.03);
   transform-origin: bottom ;
   transition: all 0.13s ease;
+}
+
+@media (max-width: 600px) {
+  nav {
+    flex-direction: column;
+    gap: 10px;
+    margin-left: 0;
+  }
+  .contact-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-left: 0;
+    margin-right: 0;
+    gap: 10px;
+  }
+  .about-title,.about-content,.about-image,.project-link {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .about-title {
+    font-size: 20px;
+  }
+
 }
