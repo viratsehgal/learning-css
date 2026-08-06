@@ -101,17 +101,30 @@ section {
 .about-title {
   font-size: 24px;
   font-weight: bold;
-  text-align: left;
+  text-align: center;
   margin-bottom: 20px;
-  margin-left: 20px;
   margin-top: 15px;
+}
+
+.about-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  padding: 10px 25px;
+  margin-bottom: 20px;
+}
+
+.about-text {
+  flex: 1;
+  text-align: left;
 }
 
 .about-content {
   font-size: 16px;
   line-height: 1.5;
-  text-align: left;
-  margin-left: 25px;
+  text-align: justify;
+  margin-left: 25%;
 }
 
 
@@ -173,17 +186,21 @@ section {
 }
 
 .about-image {
-  border-radius: 5px;
-  margin-left: 25px;
-  margin-top: 15px;
-  margin-bottom: 15px;
-  margin-right: 25px;
+  border-radius: 10px;
+  display: block;
+  margin: 0;
+  width: 125px;
+  height: 150px;
+  margin-left: 10px;
+  margin-right: 25%;
+  align-items: justify-content;
+  justify-content: center;
 }
 .about-image:hover {
-  transform: scale(1.1);
+  transform: scale(1.01);
   box-shadow: 0 0 15px rgba(255, 255, 255, 0.215);
   transition: all 0.13s ease;
-  transform-origin: left bottom;
+  transform-origin: center;
 }
 
 .contact-content-button {
@@ -226,7 +243,7 @@ section {
 .project-link:hover {
   background-color: rgba(255, 255, 255, 0.077);
   text-decoration: none;
-  transform: scale(1.03);
+  transform: scale(1.005);
   transform-origin: bottom ;
   transition: all 0.13s ease;
 }
@@ -244,12 +261,31 @@ section {
     margin-right: 0;
     gap: 10px;
   }
-  .about-title,.about-content,.about-image,.project-link {
+  .about-title,.about-content,.project-link {
     margin-left: 10px;
     margin-right: 10px;
+  }
+  .about-section {
+    flex-direction: column-reverse;
+    gap: 20px;
+    text-align: center;
+  }
+  .about-text {
+    text-align: center;
+  }
+  .about-content {
+    text-align: center;
+  }
+  .about-image {
+    margin-left: auto;
+    margin-right: auto;
   }
   .about-title {
     font-size: 20px;
   }
 
+}
+.about-content-link {
+  text-decoration:none;
+  color: inherit;
 }
