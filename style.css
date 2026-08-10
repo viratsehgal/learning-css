@@ -16,7 +16,7 @@ body {
 }
 
 nav {
-  background-color:transparent;
+  background-color: transparent;
   padding: 10px;
   border-radius: 10px;
   width: 100%;
@@ -25,7 +25,6 @@ nav {
   display: flex;
   justify-content: space-between;
   margin-left: 8px;
-
 }
 
 .navbar {
@@ -59,7 +58,7 @@ section {
   text-align: left;
   margin-bottom: 20px;
   margin-left: 10px;
-  margin-top: 15px; 
+  margin-top: 15px;
   margin-right: 10px;
 }
 
@@ -113,20 +112,22 @@ section {
   gap: 40px;
   padding: 10px 25px;
   margin-bottom: 20px;
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .about-text {
-  flex: 1;
+  flex: 0 1 auto;
   text-align: left;
+  min-width: 0;
 }
 
 .about-content {
   font-size: 16px;
   line-height: 1.5;
-  text-align: justify;
-  margin-left: 25%;
+  white-space: nowrap;
 }
-
 
 #email:hover {
   text-decoration: underline;
@@ -191,15 +192,12 @@ section {
   margin: 0;
   width: 125px;
   height: 150px;
-  margin-left: 10px;
-  margin-right: 25%;
-  align-items: justify-content;
-  justify-content: center;
+  flex-shrink: 0;
 }
 .about-image:hover {
-  transform: scale(1.01);
+  transform: scale(1.1);
   box-shadow: 0 0 15px rgba(255, 255, 255, 0.215);
-  transition: all 0.13s ease;
+  transition: all 0.3s ease;
   transform-origin: center;
 }
 
@@ -244,11 +242,11 @@ section {
   background-color: rgba(255, 255, 255, 0.077);
   text-decoration: none;
   transform: scale(1.005);
-  transform-origin: bottom ;
+  transform-origin: bottom;
   transition: all 0.13s ease;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 800px) {
   nav {
     flex-direction: column;
     gap: 10px;
@@ -261,7 +259,9 @@ section {
     margin-right: 0;
     gap: 10px;
   }
-  .about-title,.about-content,.project-link {
+  .about-title,
+  .about-content,
+  .project-link {
     margin-left: 10px;
     margin-right: 10px;
   }
@@ -275,6 +275,7 @@ section {
   }
   .about-content {
     text-align: center;
+    white-space: nowrap;
   }
   .about-image {
     margin-left: auto;
@@ -283,9 +284,48 @@ section {
   .about-title {
     font-size: 20px;
   }
-
 }
 .about-content-link {
-  text-decoration:none;
+  text-decoration: none;
   color: inherit;
+}
+
+@media (max-width: 360px) {
+  nav {
+    flex-direction: column;
+    gap: 10px;
+    margin-left: 0;
+  }
+  .contact-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-left: 0;
+    margin-right: 0;
+    gap: 10px;
+  }
+  .about-title,
+  .about-content,
+  .project-link {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .about-section {
+    flex-direction: column-reverse;
+    gap: 2px;
+    text-align: center;
+  }
+  .about-text {
+    text-align: center;
+  }
+  .about-content {
+    text-align: center;
+    white-space: nowrap;
+  }
+  .about-image {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .about-title {
+    font-size: 20px;
+  }
 }
