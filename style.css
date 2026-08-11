@@ -4,6 +4,11 @@
   box-sizing: border-box;
 }
 
+html {
+  max-width: 100%;
+  overflow-x: clip;
+}
+
 body {
   font-family:
     "Google Sans", apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
@@ -13,6 +18,8 @@ body {
   font-style: bold;
   background-color: rgb(29, 29, 29);
   color: white;
+  max-width: 100%;
+  overflow-x: clip;
 }
 
 nav {
@@ -20,32 +27,12 @@ nav {
   padding: 10px;
   border-radius: 10px;
   width: 100%;
+  max-width: 100%;
   text-align: center;
   align-items: center;
   display: flex;
-  justify-content: space-between;
-  margin-left: 8px;
-}
-
-.navbar {
-  list-style: none;
-  display: inline-block;
-  gap: 8px;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.navbar > li > a {
-  display: block;
-  padding: 10px 16px;
-  color: white;
-  text-decoration: none;
-  background-color: rgba(153, 217, 234, 0.158);
-  border-radius: 10px;
-}
-
-.navbar > li > a:hover {
-  background-color: rgba(153, 217, 234, 0.308);
+  justify-content: flex-end;
+  margin-left: 0;
 }
 
 section {
@@ -83,18 +70,17 @@ section {
   line-height: 1.5;
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   gap: 16px;
   margin-left: auto;
   margin-right: 10px;
+  max-width: 100%;
 }
 
 .contact-links a {
   color: white;
   text-decoration: none;
-}
-
-.navbar > li > a:active {
-  background-color: rgba(153, 217, 234, 0.508);
+  white-space: nowrap;
 }
 
 .about-title {
@@ -103,6 +89,8 @@ section {
   text-align: center;
   margin-bottom: 20px;
   margin-top: 15px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .about-section {
@@ -112,7 +100,8 @@ section {
   gap: 40px;
   padding: 10px 25px;
   margin-bottom: 20px;
-  max-width: 720px;
+  max-width: min(720px, 100%);
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
 }
@@ -121,12 +110,14 @@ section {
   flex: 0 1 auto;
   text-align: left;
   min-width: 0;
+  max-width: 100%;
 }
 
 .about-content {
   font-size: 16px;
   line-height: 1.5;
   white-space: nowrap;
+  max-width: 100%;
 }
 
 #email:hover {
@@ -192,8 +183,11 @@ section {
   margin: 0;
   width: 125px;
   height: 150px;
+  max-width: 100%;
+  object-fit: cover;
   flex-shrink: 0;
 }
+
 .about-image:hover {
   transform: scale(1.1);
   box-shadow: 0 0 15px rgba(255, 255, 255, 0.215);
@@ -212,6 +206,7 @@ section {
   text-decoration: none;
   font-family: inherit;
   transition: all 0.13s ease;
+  white-space: nowrap;
 }
 
 .about-content-divider {
@@ -223,10 +218,13 @@ section {
   background: rgba(153, 217, 234, 0.308);
   border: none;
   height: 2px;
+  max-width: 100%;
 }
+
 .project-link {
   display: block;
-  width: fit-contain;
+  width: auto;
+  max-width: 100%;
   padding: 10px 16px;
   color: white;
   text-decoration: none;
@@ -236,6 +234,7 @@ section {
   margin-top: 10px;
   margin-bottom: 10px;
   background-color: rgba(254, 254, 254, 0.027);
+  overflow-wrap: anywhere;
 }
 
 .project-link:hover {
@@ -246,86 +245,100 @@ section {
   transition: all 0.13s ease;
 }
 
-@media (max-width: 800px) {
-  nav {
-    flex-direction: column;
-    gap: 10px;
-    margin-left: 0;
-  }
-  .contact-links {
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-left: 0;
-    margin-right: 0;
-    gap: 10px;
-  }
-  .about-title,
-  .about-content,
-  .project-link {
-    margin-left: 10px;
-    margin-right: 10px;
-  }
-  .about-section {
-    flex-direction: column-reverse;
-    gap: 20px;
-    text-align: center;
-  }
-  .about-text {
-    text-align: center;
-  }
-  .about-content {
-    text-align: center;
-    white-space: nowrap;
-  }
-  .about-image {
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .about-title {
-    font-size: 20px;
-  }
-}
 .about-content-link {
   text-decoration: none;
   color: inherit;
 }
 
-@media (max-width: 360px) {
+@media (max-width: 800px) {
   nav {
     flex-direction: column;
+    justify-content: center;
     gap: 10px;
-    margin-left: 0;
+    padding: 10px 0;
   }
+
   .contact-links {
-    flex-wrap: wrap;
     justify-content: center;
     margin-left: 0;
     margin-right: 0;
     gap: 10px;
   }
+
   .about-title,
-  .about-content,
   .project-link {
     margin-left: 10px;
     margin-right: 10px;
   }
+
   .about-section {
     flex-direction: column-reverse;
-    gap: 2px;
+    gap: 20px;
     text-align: center;
+    padding: 10px 16px;
   }
+
   .about-text {
     text-align: center;
+    width: 100%;
   }
+
   .about-content {
     text-align: center;
     white-space: nowrap;
+    font-size: clamp(12px, 3.6vw, 16px);
   }
+
   .about-image {
     margin-left: auto;
     margin-right: auto;
   }
+
   .about-title {
     font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 10px;
+  }
+
+  .contact-links {
+    gap: 8px 12px;
+    font-size: 15px;
+  }
+
+  .contact-content-button {
+    font-size: 15px;
+  }
+
+  .about-section {
+    gap: 16px;
+    padding: 10px 8px;
+  }
+
+  .about-content {
+    white-space: normal;
+    overflow-wrap: break-word;
+  }
+
+  .project-link {
+    margin-left: 8px;
+    margin-right: 8px;
+  }
+}
+
+@media (max-width: 360px) {
+  .about-section {
+    gap: 2px;
+  }
+
+  .about-title {
+    font-size: 20px;
+  }
+
+  .contact-links {
+    gap: 8px;
   }
 }
