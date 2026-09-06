@@ -1,93 +1,139 @@
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="light dark" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400&family=Inter:wght@400;500;600&family=Schoolbell&display=swap"
+    />
     <link rel="stylesheet" href="style.css" />
     <title>Virat Sehgal</title>
     <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
     <script defer src="https://cdn.vercel-insights.com/v1/script.js"></script>
   </head>
   <body>
-    <nav>
-      <div class="contact-links">
-        <button onclick="copytext()" id="email" class="contact-content-button">
-          E-mail
-        </button>
-        <a href="https://x.com/ViratSehgal__" target="_blank" id="twitter"
-          >X(Twitter)↗</a
-        >
-        <a
-          href="https://www.instagram.com/viratsehgall/"
-          target="_blank"
-          id="instagram"
-          >Instagram↗</a
-        >
+    <div class="page">
+      <header class="masthead">
+        <h1 class="masthead__name">Hello, I&rsquo;m Virat</h1>
 
-        <a href="https://github.com/viratsehgal" target="_blank" id="github"
-          >GitHub↗</a
-        >
-      </div>
-    </nav>
+        <nav class="menu" aria-label="Elsewhere">
+          <span class="menu__dot" aria-hidden="true"></span>
+          <div class="contact-links">
+            <button
+              onclick="copytext()"
+              id="email"
+              class="contact-content-button"
+            >
+              E-mail
+            </button>
+            <a href="https://x.com/ViratSehgal__" target="_blank" id="twitter"
+              >X (Twitter)</a
+            >
+            <a
+              href="https://www.instagram.com/viratsehgall/"
+              target="_blank"
+              id="instagram"
+              >Instagram</a
+            >
+            <a href="https://github.com/viratsehgal" target="_blank" id="github"
+              >GitHub</a
+            >
+          </div>
+        </nav>
+      </header>
 
-    <h1 class="about-title">About Me</h1>
-    <div class="about-section">
-      <div class="about-text">
-        <p class="about-content">My name is Virat Sehgal</p>
-        <p class="about-content">
-          I am currently studying Computer Science and Engineering.
-        </p>
-        <p class="about-content">
-          Learning new programming languages and frameworks.
-        </p>
-        <p class="about-content">
-          I spent almost a year as a Culinary student in Bengaluru.
-        </p>
-      </div>
-      <img src="images/Virat.img.jpeg" alt="Virat Sehgal" class="about-image" />
+      <section class="about" aria-labelledby="about-heading">
+        <div class="about__text">
+          <h2 id="about-heading">About</h2>
+          <p>
+            My name is Virat Sehgal. I am currently studying Computer Science
+            and Engineering, learning new programming languages and frameworks.
+          </p>
+        </div>
+        <img
+          src="images/Virat.img.jpeg"
+          alt="Virat Sehgal"
+          class="about__image"
+          width="240"
+          height="288"
+        />
+      </section>
+
+      <section class="works" aria-labelledby="works-heading">
+        <h2 id="works-heading">Projects</h2>
+
+        <div class="projects">
+          <article class="project">
+            <h3 class="project__title">
+              <a href="/catalogue/">Nine Small Applications</a>
+            </h3>
+            <p class="project__desc">
+              A catalogue of the nine apps I have built with Claude Code, each
+              with a note on how it works and where to try it. Set as a book.
+            </p>
+            <p class="project__links">
+              <a href="/catalogue/"
+                >Read the catalogue <span aria-hidden="true">&rarr;</span></a
+              >
+            </p>
+          </article>
+
+          <article class="project">
+            <h3 class="project__title">
+              <a href="https://learning-web-six.vercel.app/" target="_blank"
+                >My Youtube</a
+              >
+            </h3>
+            <p class="project__desc">
+              A video shelf, and a music one beside it. One search runs across
+              both catalogues; a theme switch, a saved account, notifications.
+            </p>
+            <p class="project__links">
+              <a href="https://learning-web-six.vercel.app/" target="_blank"
+                >Live</a
+              >
+              <span class="project__sep" aria-hidden="true">&middot;</span>
+              <a
+                href="https://x.com/ViratSehgal__/status/2080133019051114671"
+                target="_blank"
+                >Post</a
+              >
+            </p>
+          </article>
+
+          <article class="project">
+            <h3 class="project__title">
+              <a
+                href="https://x.com/ViratSehgal__/status/2075296182763749781"
+                target="_blank"
+                >Student Management System</a
+              >
+            </h3>
+            <p class="project__desc">
+              Ten options behind a sign-in, every record kept in a plain text
+              file, and a terminal drawn at a fixed fifty-eight columns.
+            </p>
+            <p class="project__links">
+              <a
+                href="https://x.com/ViratSehgal__/status/2075296182763749781"
+                target="_blank"
+                >Post</a
+              >
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <footer class="foot">
+        <span>Virat Sehgal</span>
+        <span class="foot__dim">2026</span>
+      </footer>
     </div>
-    <h1 class="about-title">My Projects</h1>
-    <a
-      href="https://x.com/ViratSehgal__/status/2080133019051114671"
-      target="_blank"
-      class="project-link"
-      >Basic Youtube Clone</a
-    >
-    <a
-      href="https://x.com/ViratSehgal__/status/2075296182763749781"
-      target="_blank"
-      class="project-link"
-      >Python student management system</a
-    >
-    <a
-      href="https://x.com/ViratSehgal__/status/2088433456640577770"
-      target="_blank"
-      class="project-link"
-      >Retracing steel tape component</a
-    >
-    <a
-      href="https://x.com/ViratSehgal__/status/2092701304321982695"
-      target="_blank"
-      class="project-link"
-      >Universal back button for iPhone</a
-    >
-    <a
-      href="https://x.com/ViratSehgal__/status/2093100593418248644"
-      target="_blank"
-      class="project-link"
-      >Smart light music sync controller</a
-    >
-    <a
-      href="https://x.com/ViratSehgal__/status/2093407773879160902"
-      target="_blank"
-      class="project-link"
-      >Chopsticks game</a
-    >
-    <a
-      href="https://x.com/ViratSehgal__/status/2093793365922132375"
-      target="_blank"
-      class="project-link"
-      >Centsible app</a
-    >
+
     <script>
       function copytext() {
         const text = "viratsehgal.work@gmail.com";
@@ -95,11 +141,10 @@
           const button = document.getElementById("email");
           button.innerText = "Copied!";
           setTimeout(() => {
-            button.innerText = " E-mail";
+            button.innerText = "E-mail";
           }, 2000);
         });
       }
     </script>
-    <hr class="about-content-divider" />
   </body>
 </html>

@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Nine Small Applications — A Catalogue</title>
+  <meta name="description" content="A catalogue of nine applications built with Claude Code, set as a book." />
+  <meta name="color-scheme" content="light dark" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip" href="#contents">Skip to contents</a>
+
+  <!-- running head ------------------------------------------------------- -->
+  <header class="runner" id="runner">
+    <span class="runner__book">Nine Small Applications</span>
+    <span class="runner__chapter" id="runnerChapter"></span>
+    <span class="runner__right">
+      <button class="runner__toggle" id="themeToggle" type="button" aria-live="polite">Night</button>
+      <span class="runner__folio" id="runnerFolio"></span>
+    </span>
+  </header>
+
+  <!-- title page --------------------------------------------------------- -->
+  <section class="cover" aria-labelledby="coverTitle">
+    <p class="cover__above">Built with Claude&nbsp;Code</p>
+    <hr class="rule rule--short" />
+    <h1 class="cover__title" id="coverTitle">Nine Small<br />Applications</h1>
+    <p class="cover__sub">A catalogue of things made, in the order they were made,<br />with a note on how each one works</p>
+    <hr class="rule rule--short" />
+    <p class="cover__author"><a class="cover__home" href="https://viratsehgal.com/">Virat Sehgal</a></p>
+    <p class="cover__imprint">Nine works &middot; MMXXVI</p>
+    <a class="cover__cue" href="#contents" aria-label="Go to contents">Contents</a>
+  </section>
+
+  <!-- front matter ------------------------------------------------------- -->
+  <section class="page preface" aria-labelledby="prefaceHead">
+    <h2 class="head" id="prefaceHead">Preface</h2>
+    <div class="prose">
+      <p class="lede">Nine applications, made between the middle of August and the beginning of September, twenty twenty-six. A tape measure that snaps back. A sampler. A finance manager. A profile turned into a film with music written for it.</p>
+      <p>They have almost nothing in common except the way they were made and a preference for doing the awkward part properly — computing the graduations rather than drawing them, cutting the video on the bar rather than near it, saying out loud which of the two music services has no public API. Most are a single page with no dependencies; a few are servers. None of them asks you to sign in to anything.</p>
+      <p>Each entry gives the work a page: what it is, what is underneath it, and where to find it on disk. The index at the back lists the techniques, should you want to read by method rather than by date.</p>
+    </div>
+  </section>
+
+  <div class="ornament" aria-hidden="true">&#8258;</div>
+
+  <!-- contents ----------------------------------------------------------- -->
+  <section class="page" id="contents" aria-labelledby="contentsHead">
+    <h2 class="head" id="contentsHead">Contents</h2>
+    <ol class="toc" id="toc"></ol>
+  </section>
+
+  <div class="ornament" aria-hidden="true">&#8258;</div>
+
+  <!-- the works ---------------------------------------------------------- -->
+  <main id="works"></main>
+
+  <div class="ornament" aria-hidden="true">&#8258;</div>
+
+  <!-- index -------------------------------------------------------------- -->
+  <section class="page" id="index" aria-labelledby="indexHead">
+    <h2 class="head" id="indexHead">Index of Methods</h2>
+    <p class="head__note">Numerals refer to entries, not pages.</p>
+    <ul class="backindex" id="backindex"></ul>
+  </section>
+
+  <!-- colophon ----------------------------------------------------------- -->
+  <footer class="page colophon" aria-labelledby="colophonHead">
+    <hr class="rule rule--short" />
+    <h2 class="head head--small" id="colophonHead">Colophon</h2>
+    <p>Set in EB&nbsp;Garamond, with Cormorant&nbsp;Garamond on the title page and IBM&nbsp;Plex&nbsp;Mono for the marginalia. Composed as one static page with no framework and no build step.</p>
+    <p>The nine works catalogued here were written with <span class="sc">Claude Code</span>, and so was the catalogue.</p>
+    <p><a class="colophon__home" href="https://viratsehgal.com/">viratsehgal.com</a></p>
+    <p class="colophon__end">&#8212; <span id="year"></span> &#8212;</p>
+  </footer>
+
+  <script src="apps.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
