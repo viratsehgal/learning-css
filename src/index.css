@@ -1,0 +1,82 @@
+/* ─────────────────────────────────────────────────────────────────────────
+   viratsehgal.com
+
+   Built on an 8px baseline: 16/24 type, 64px gutters, everything a multiple
+   of the unit. Secondary text is the foreground colour at lower alpha rather
+   than a separate grey, so it stays right in both themes. No boxes, no
+   borders, no shadows — the layout is the design.
+   ───────────────────────────────────────────────────────────────────────── */
+
+@import "tailwindcss";
+
+:root {
+  --bg: #ffffff;
+  --fg-rgb: 22, 20, 19;
+  --dim: 0.52;
+  --faint: 0.34;
+  --accent: #8f3a29;
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #1d1d1d;
+    --fg-rgb: 237, 233, 226;
+    --dim: 0.5;
+    --faint: 0.32;
+    --accent: #cd7a63;
+    color-scheme: dark;
+  }
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-fg: rgb(var(--fg-rgb));
+  --color-fg-dim: rgba(var(--fg-rgb), var(--dim));
+  --color-fg-faint: rgba(var(--fg-rgb), var(--faint));
+  --color-accent: var(--accent);
+}
+
+@theme {
+  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-hand: "Schoolbell", "Comic Sans MS", cursive;
+
+  /* one size for all running text; hierarchy comes from weight and colour */
+  --text-base: 0.9375rem;
+  --text-base--line-height: 1.5rem;
+
+  /* the layout changes at 560px (one column → two) and 900px (two → three) */
+  --breakpoint-sm: 35rem;
+  --breakpoint-md: 56.25rem;
+}
+
+@layer base {
+  html,
+  body {
+    max-width: 100%;
+    overflow-x: clip;
+  }
+
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    @apply bg-bg font-sans text-base text-fg antialiased;
+    font-feature-settings: "cv05", "cv08", "ss03";
+  }
+
+  ::selection {
+    @apply bg-accent text-bg;
+  }
+
+  :focus-visible {
+    @apply rounded-xs outline-2 outline-offset-3 outline-accent;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    * {
+      transition: none !important;
+    }
+  }
+}
